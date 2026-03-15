@@ -65,6 +65,37 @@ button:hover {
   filter: brightness(1.03);
 }
 
+.dial-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 320px));
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 0.9rem;
+}
+
+.dial {
+  background: rgba(255, 255, 255, 0.55);
+  border: 2px solid rgba(0, 119, 182, 0.35);
+  border-radius: 0.9rem;
+  padding: 0.65rem 0.75rem;
+  display: grid;
+  gap: 0.35rem;
+  box-shadow: 0 6px 14px rgba(1, 58, 99, 0.1);
+}
+
+.dial span {
+  font-weight: 700;
+}
+
+.dial strong {
+  font-size: 0.9rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--deep-sea);
+}
+
 .board-wrap {
   background: rgba(255, 255, 255, 0.5);
   border: 3px solid rgba(0, 119, 182, 0.45);
@@ -90,7 +121,6 @@ canvas {
 
 .histogram {
   display: grid;
-  grid-template-columns: repeat(11, minmax(0, 1fr));
   align-items: end;
   gap: 0.45rem;
   height: 180px;
@@ -125,4 +155,10 @@ canvas {
   margin-top: 1.4rem;
   font-weight: 700;
   text-align: center;
+}
+
+@media (max-width: 740px) {
+  .dial-controls {
+    grid-template-columns: 1fr;
+  }
 }
