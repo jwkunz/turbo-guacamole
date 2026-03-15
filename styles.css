@@ -1,0 +1,128 @@
+:root {
+  --sand: #ffe8a3;
+  --shell: #ffd18f;
+  --seafoam: #81f2e5;
+  --lagoon: #00b4d8;
+  --deep-sea: #0077b6;
+  --coral: #ff7f6a;
+  --sunset: #ffb703;
+  --text: #013a63;
+  font-family: "Trebuchet MS", "Avenir Next", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #8ee3f5 0%, #48cae4 45%, #ffddb3 100%);
+  color: var(--text);
+}
+
+.container {
+  width: min(1000px, 96vw);
+  margin: 1.2rem auto 1.8rem;
+  padding: 1rem;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+#status {
+  margin-top: 0.35rem;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  gap: 0.65rem;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  color: #013a63;
+  background: linear-gradient(180deg, #fff0c2, #ffd166);
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(1, 58, 99, 0.2);
+}
+
+button:hover {
+  filter: brightness(1.03);
+}
+
+.board-wrap {
+  background: rgba(255, 255, 255, 0.5);
+  border: 3px solid rgba(0, 119, 182, 0.45);
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(1, 58, 99, 0.18);
+  padding: 0.6rem;
+}
+
+canvas {
+  width: 100%;
+  display: block;
+  border-radius: 0.75rem;
+  background: linear-gradient(180deg, #b6f2ff 0%, #caf0f8 60%, #ffe0b2 100%);
+}
+
+.results {
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 1rem;
+  padding: 0.9rem 0.9rem 0.7rem;
+  border: 2px solid rgba(255, 183, 3, 0.5);
+}
+
+.histogram {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  align-items: end;
+  gap: 0.45rem;
+  height: 180px;
+  margin-top: 0.75rem;
+}
+
+.bar {
+  position: relative;
+  border-radius: 0.55rem 0.55rem 0.2rem 0.2rem;
+  background: linear-gradient(180deg, var(--coral), var(--sunset));
+  min-height: 2px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #4a2500;
+}
+
+.bucket-label {
+  position: absolute;
+  bottom: -1.15rem;
+}
+
+.bucket-count {
+  position: absolute;
+  top: -1.05rem;
+  font-size: 0.67rem;
+}
+
+#summary {
+  margin-top: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+}
