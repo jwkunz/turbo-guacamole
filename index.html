@@ -18,6 +18,19 @@
         <button id="reset" type="button">Reset</button>
       </section>
 
+      <section class="dial-controls" aria-label="Simulation dials">
+        <label for="rows-dial" class="dial">
+          <span>Rows / Bins</span>
+          <input id="rows-dial" type="range" min="6" max="16" step="1" value="10" />
+          <strong><span id="rows-value">10</span> rows • <span id="bins-value">11</span> bins</strong>
+        </label>
+        <label for="speed-dial" class="dial">
+          <span>Spin Speed</span>
+          <input id="speed-dial" type="range" min="0.5" max="2.5" step="0.1" value="1" />
+          <strong><span id="speed-value">1.0×</span></strong>
+        </label>
+      </section>
+
       <section class="board-wrap">
         <canvas id="plinko-canvas" width="900" height="560" aria-label="Plinko simulation board"></canvas>
       </section>
