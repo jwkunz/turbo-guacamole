@@ -157,8 +157,22 @@ canvas {
   text-align: center;
 }
 
+.legal {
+  margin-top: 1rem;
+  padding: 0.8rem 0 0.2rem;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(1, 58, 99, 0.82);
+}
+
 @media (max-width: 740px) {
   .dial-controls {
     grid-template-columns: 1fr;
+  }
+
+  .legal {
+    font-size: 0.75rem;
+    line-height: 1.45;
   }
 }
